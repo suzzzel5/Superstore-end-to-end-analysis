@@ -10,24 +10,23 @@ Dataset source: [Superstore Sales Dataset (Kaggle)](https://www.kaggle.com/datas
 
 ## Dashboard
 
-*(Screenshot to be added here)*
+![Superstore Sales Analysis Dashboard](images/dashboard_screenshot.jpg)
 
 ---
 
 ## Project Structure
 
 ```
-├── data/
-│   └── superstore_clean.csv
-├── sql/
-│   └── analysis_queries.sql
-├── notebooks/
-│   └── eda_and_cleaning.ipynb
-├── powerbi/
-│   └── superstore_dashboard.pbix
 ├── images/
-│   └── dashboard_screenshot.png
-└── README.md
+│   └── dashboard_screenshot.jpg
+├── notebooks/
+│   ├── data_analysis.ipynb
+│   └── data_exploration.ipynb
+├── README.md
+├── superstore.csv
+├── superstore.pbix
+├── superstore_clean.csv
+└── train.csv
 ```
 
 ---
@@ -182,7 +181,7 @@ The cleaned dataset was saved both to a `superstore_clean` PostgreSQL table and 
 
 ## Part 3: Power BI
 
-Power BI connects directly to the `superstore_clean` PostgreSQL table (CSV included as a portable backup).
+The interactive Power BI dashboard is saved as `superstore.pbix` in the root of the repository. It connects directly to the `superstore_clean` PostgreSQL table (CSV included as a portable backup).
 
 Data model:
 - A dedicated Date table built with `CALENDAR()` in DAX, linked to `order_date`, enabling year/quarter/month drilldowns
@@ -235,9 +234,9 @@ The business is retention-driven and low-risk.
 ## How to Reproduce
 
 1. Clone this repository
-2. Load `data/superstore_clean.csv` into PostgreSQL, or run `sql/analysis_queries.sql` against your own copy of the raw dataset
-3. Open `notebooks/eda_and_cleaning.ipynb` to follow the cleaning and investigation process
-4. Open `powerbi/superstore_dashboard.pbix` in Power BI Desktop and point the data source to your PostgreSQL instance or the CSV
+2. Load `superstore_clean.csv` into PostgreSQL, or use it directly as a local CSV data source
+3. Open `notebooks/data_exploration.ipynb` and `notebooks/data_analysis.ipynb` to follow the cleaning and investigation process
+4. Open `superstore.pbix` in Power BI Desktop and point the data source to your PostgreSQL instance or the local CSV file
 
 ---
 
