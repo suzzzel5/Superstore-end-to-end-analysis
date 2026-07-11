@@ -10,15 +10,23 @@ Dataset source: [Superstore Sales Dataset (Kaggle)](https://www.kaggle.com/datas
 
 ## Dashboard
 
-![Superstore Sales Analysis Dashboard](images/dashboard_screenshot.jpg)
+![Superstore Sales Analysis Dashboard](image/dashboard.png)
+
+*Additional Dashboard Views:*
+- **Sales Performance:** ![d1](image/d1.png)
+- **Product & Category Analysis:** ![d2](image/d2.png)
+- **Customer Segmentation:** ![d3](image/d3.png)
 
 ---
 
 ## Project Structure
 
 ```
-├── images/
-│   └── dashboard_screenshot.jpg
+├── image/
+│   ├── d1.png
+│   ├── d2.png
+│   ├── d3.png
+│   └── dashboard.png
 ├── notebooks/
 │   ├── data_analysis.ipynb
 │   └── data_exploration.ipynb
